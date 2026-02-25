@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:one_take_media/callFunction/callFunction.dart';
 import 'SPLASH_SCREEN/splash_screen.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+      // home: CallFunction(),
     );
   }
 }

@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:one_take_media/LOGIN_SCREEN/LoginScreen.dart';
+
+import '../Footer/footer.dart';
 class home_page extends StatefulWidget {
   const home_page({super.key});
 
@@ -72,6 +75,15 @@ class _home_page extends State<home_page> {
             bottom: Radius.circular(12),
           ),
         ),
+        actions: [
+          InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+            },
+            child: Text("Hi"),
+          )
+        ],
+
       ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
@@ -170,6 +182,7 @@ class _home_page extends State<home_page> {
           );
         },
       ),
+      bottomNavigationBar: const footer(),
     );
   }
 }
